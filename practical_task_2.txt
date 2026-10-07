@@ -1,0 +1,33 @@
+Technical evaluation part 2
+
+2.a I would normally start with the standard scanpy pipelines. Start inspecting 
+filtered matrix, followed by QC (violin plots), removing cells with high mitrochondrial counts, 
+normalize, log-transform, highligh highly variable genes, scale, pca, neighborhood 
+calculation, computing umap, leiden clusterings, visualize clusters at different 
+resolutions to get the feel of the data, perform differential expression analysis 
+between clusters using wilcoxon method, plot top 10-20 genes for each cluster. 
+Inspect differentially expressed genes filtered by FDR (that accounts for multiple 
+testing) and log-foldchange values. Finally proceed with enrichment analysis, where
+DEGs would be mapped against databases like gene ontology. I would also perform 
+gene set enrichment analysis to check if specific pathways shows a heavy shift in the dataset.
+
+
+
+2.b
+2.c
+
+3. 
+
+4. I will make myself familiarize with the concepts. Understand the task in simple 
+language, brainstorm with chatgpt as I believe it's reasoning is quite good. 
+But AI halucinates. So I will go through youtube videos and get more intitution 
+about it. Once I have a bit of clarity, I will sketch a rough plan, use divide and 
+conqure approach by breaking tasks into smaller chunks. 
+Depending upon the complexity of the task, if there are tutorial available, 
+I will follow it myself with small dataset. If not, I will reason with chatgpt 
+and modularise the code using chatgpt + Claude code. Still keeping the code 
+human-readable and understandable.
+
+5. I will go through the calculations and logic that I used again. 
+Check the data files. Compare what the same script/analysis generated for me and 
+the user.
