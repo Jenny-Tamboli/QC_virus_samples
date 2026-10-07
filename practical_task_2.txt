@@ -1,20 +1,23 @@
 Technical evaluation part 2
 
-2.a I would normally start with the standard scanpy pipelines. Start inspecting 
-filtered matrix, followed by QC (violin plots), removing cells with high mitrochondrial counts, 
-normalize, log-transform, highligh highly variable genes, scale, pca, neighborhood 
-calculation, computing umap, leiden clusterings, visualize clusters at different 
-resolutions to get the feel of the data, perform differential expression analysis 
-between clusters using wilcoxon method, plot top 10-20 genes for each cluster. 
-Inspect differentially expressed genes filtered by FDR (that accounts for multiple 
-testing) and log-foldchange values. Finally proceed with enrichment analysis, where
-DEGs would be mapped against databases like gene ontology. I would also perform 
-gene set enrichment analysis to check if specific pathways shows a heavy shift in the dataset.
+2.a I would first perform sample-level QC, inspect library size, expression 
+distributions, PCA and possible batch effects. Lowly expressed genes would be 
+filtered before normalization. Since tumour and adjacent-normal samples are 
+matched within patients, I would use a paired design in DESeq2, 
+for example ~ patient + condition, and test the tumour-versus-normal effect using 
+the Wald test. I would report log2 fold changes and FDR-adjusted p-values, 
+with an additional effect-size threshold where appropriate. 
+For pathway analysis, I would rank genes by the DE statistic and perform GSEA 
+using curated databases such as GO, KEGG, Reactome or MSigDB. 
+I would also consider clinically relevant covariates such as, 
+tumour stage or batch if they are not confounded with the main comparison.
 
 
+2.b Adjacent normal tissue may not be truly healthy, and with 900 patients even 
+small effects can become statistically significant. I would therefore interpret 
+FDR together with log2 fold-change and biological relevance.
 
-2.b
-2.c
+2.c It shows tumor-normal expression difference and heterogeneity between patients.
 
 3. 
 
@@ -30,4 +33,4 @@ human-readable and understandable.
 
 5. I will go through the calculations and logic that I used again. 
 Check the data files. Compare what the same script/analysis generated for me and 
-the user.
+the user. Regenerate the output and document what changed.
