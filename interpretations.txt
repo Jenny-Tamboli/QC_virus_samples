@@ -4,6 +4,3 @@
 
 3. All four origins exceeded the 10% failure threshold and therefore generated a 
 warning.
-
-4. These values describe the supplied example dataset; the script calculates the 
-same metrics dynamically for future input files.
