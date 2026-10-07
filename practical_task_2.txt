@@ -21,16 +21,19 @@ FDR together with log2 fold-change and biological relevance.
 
 3. 
 
-4. I will make myself familiarize with the concepts. Understand the task in simple 
-language, brainstorm with chatgpt as I believe it's reasoning is quite good. 
-But AI halucinates. So I will go through youtube videos and get more intitution 
-about it. Once I have a bit of clarity, I will sketch a rough plan, use divide and 
-conqure approach by breaking tasks into smaller chunks. 
-Depending upon the complexity of the task, if there are tutorial available, 
-I will follow it myself with small dataset. If not, I will reason with chatgpt 
-and modularise the code using chatgpt + Claude code. Still keeping the code 
-human-readable and understandable.
+4. I would first familiarize myself with the concept and understand the task in 
+simple language. I would brainstorm with ChatGPT to structure my reasoning, but 
+since AI can hallucinate, I would verify the approach using documentation, 
+tutorials, papers, or trusted examples. Once I have enough clarity, 
+I would sketch a rough plan and use a divide-and-conquer approach, breaking 
+the analysis into smaller steps. If tutorials or example datasets are available, 
+I would first test the workflow on a small dataset. I may use ChatGPT or Claude 
+Code to help reason through and modularize the implementation, while making sure 
+I understand the code and keep it human-readable and reproducible.
 
-5. I will go through the calculations and logic that I used again. 
-Check the data files. Compare what the same script/analysis generated for me and 
-the user. Regenerate the output and document what changed.
+5. I would first go back through the calculations, code, and input files to 
+identify exactly where the mistake occurred and which results were affected. 
+I would inform the PI transparently, correct the analysis, regenerate the affected 
+outputs, and clearly document what changed. I would also compare the corrected 
+results with the previous version and add an additional validation or sanity-check 
+step to reduce the chance of the same error happening again.
