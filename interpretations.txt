@@ -1,0 +1,9 @@
+1. The provided file contained 373 samples across four origins.
+
+2. Overall, 91 of 373 samples failed the defined QC criteria.
+
+3. All four origins exceeded the 10% failure threshold and therefore generated a 
+warning.
+
+4. These values describe the supplied example dataset; the script calculates the 
+same metrics dynamically for future input files.
